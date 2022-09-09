@@ -1,0 +1,56 @@
+@import '../../styles/nomis.scss';
+
+footer {
+    $padding: 1rem;
+
+    a {
+        color: $color_caption;
+    }
+
+    a:hover {
+        color: $color_callout;
+    }
+
+    a:hover:after {
+        background: $color_callout;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        padding: $padding 0;
+    }
+
+    .wrapper {
+        margin: calc(-1 * $padding) 0;
+    }
+
+    .logo {
+        fill: $color_footnote
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        :first-child {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        :first-child:before {
+            content: none;
+        }
+
+        li:before {
+            content: '•';
+            padding-right: 1rem;
+            color: $color_footnote;
+        }
+    }
+}
